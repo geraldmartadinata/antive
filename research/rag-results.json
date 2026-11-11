@@ -1,0 +1,65 @@
+{
+  "model": "qwen2.5-0.5b-instruct-q4_k_m",
+  "cases": [
+    {
+      "case": "Barang pengganti mendesak",
+      "item": "HP untuk kerja",
+      "expected_context": "urgent",
+      "context": "urgent",
+      "source": {
+        "title": "Opportunity Cost Neglect",
+        "url": "https://doi.org/10.1086/599764"
+      },
+      "price_limit": 600000,
+      "handwritten": "Kalau barangnya dibutuhkan segera, coba bandingkan harga pengganti dan lihat tagihan yang akan terdampak.",
+      "generated": "Apakah ada sumber yang dapat membantu Anda memilih barang pengganti yang sesuai dengan kebutuhan Anda?",
+      "generated_is_single_question_without_numbers": true,
+      "generation_ms": 6693
+    },
+    {
+      "case": "Tekanan promo",
+      "item": "Sepatu flash sale",
+      "expected_context": "pressure",
+      "context": "pressure",
+      "source": {
+        "title": "Dark patterns in online shopping",
+        "url": "https://doi.org/10.1017/bpp.2022.11"
+      },
+      "price_limit": 600000,
+      "handwritten": "Kalau promonya selesai, apakah barang ini masih ingin kamu beli?",
+      "generated": "Apakah Anda memiliki penilaian atau rekomendasi tentang cara mengatur tekanan promosi yang efektif dalam pembelian?",
+      "generated_is_single_question_without_numbers": true,
+      "generation_ms": 3169
+    },
+    {
+      "case": "Di atas anggaran",
+      "item": "HP bekas",
+      "expected_context": "over_budget",
+      "context": "over_budget",
+      "source": {
+        "title": "Opportunity Cost Neglect",
+        "url": "https://doi.org/10.1086/599764"
+      },
+      "price_limit": 600000,
+      "handwritten": "Kalau barang ini dibeli, pengeluaran mana yang perlu kamu geser?",
+      "generated": "Apakah ada sumber yang dapat membantu Anda memilih produk yang lebih sesuai dengan anggaran Anda?",
+      "generated_is_single_question_without_numbers": true,
+      "generation_ms": 2611
+    },
+    {
+      "case": "Belanja yang muat",
+      "item": "Buku",
+      "expected_context": "reflection",
+      "context": "reflection",
+      "source": {
+        "title": "Impulse Buying: Design Practices and Consumer Needs",
+        "url": "https://doi.org/10.1145/3290605.3300472"
+      },
+      "price_limit": 600000,
+      "handwritten": "Kapan kamu akan memakai barang ini? Simpan rencananya jika kamu ingin mengecek lagi setelah pemasukan berikutnya.",
+      "generated": "Apakah ada metode yang dapat digunakan untuk meminimalkan pembelian spontan dalam keputusan pembelian?",
+      "generated_is_single_question_without_numbers": true,
+      "generation_ms": 2697
+    }
+  ]
+}
