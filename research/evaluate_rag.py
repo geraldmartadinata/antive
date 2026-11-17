@@ -1,20 +1,31 @@
 import argparse
+from dataclasses import dataclass
 import json
 from pathlib import Path
 import re
 from time import perf_counter
 from urllib.request import Request, urlopen
 
-from antive.demo import profiles
-from antive.engine import compare
 from antive.guidance import explanation, retrieve
-from antive.models import Offer
+
+WORKER_PRICE_LIMIT = 600_000
+
+
+@dataclass(frozen=True)
+class Case:
+    name: str
+    item: str
+    expected_context: str
+    urgent: bool = False
+    pressure: bool = False
+    cash_purchase_gap: bool = False
+
 
 CASES = [
-    ("Barang pengganti mendesak", Offer(item="HP untuk kerja", price=1500000, urgent=True), "urgent"),
-    ("Tekanan promo", Offer(item="Sepatu flash sale", price=275000, pressure=True), "pressure"),
-    ("Di atas anggaran", Offer(item="HP bekas", price=1500000), "over_budget"),
-    ("Belanja yang muat", Offer(item="Buku", price=45000), "reflection"),
+    Case("Barang pengganti mendesak", "HP untuk kerja", "urgent", urgent=True, cash_purchase_gap=True),
+    Case("Tekanan promo", "Sepatu flash sale", "pressure", pressure=True),
+    Case("Di atas anggaran", "HP bekas", "over_budget", cash_purchase_gap=True),
+    Case("Belanja yang muat", "Buku", "reflection"),
 ]
 
 
@@ -47,17 +58,16 @@ def main():
     parser.add_argument("--model", default="qwen2.5-0.5b-instruct-q4_k_m")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    budget = profiles()[0]["budget"]
     rows = []
-    for name, offer, expected in CASES:
-        calculated = compare(budget, offer)
-        baseline = explanation(offer, calculated)
+    for case in CASES:
+        comparison = {"options": [{"purchase_gap": case.cash_purchase_gap}]}
+        baseline = explanation(case, comparison)
         source = retrieve(baseline["context"])
         start = perf_counter()
-        generated = generate(args.endpoint, args.model, name, source["evidence"])
+        generated = generate(args.endpoint, args.model, case.name, source["evidence"])
         rows.append({
-            "case": name, "item": offer.item, "expected_context": expected, "context": baseline["context"],
-            "source": baseline["source"], "price_limit": calculated["report"]["price_limit"],
+            "case": case.name, "item": case.item, "expected_context": case.expected_context,
+            "context": baseline["context"], "source": baseline["source"], "price_limit": WORKER_PRICE_LIMIT,
             "handwritten": baseline["text"], "generated": generated,
             "generated_is_single_question_without_numbers": (
                 generated.endswith("?") and generated.count("?") == 1 and not re.search(r"\d", generated)
