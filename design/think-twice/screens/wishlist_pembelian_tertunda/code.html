@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#b9c7e0", "on-primary": "#ffffff", "tertiary-fixed": "#d5e3fc", "secondary-container": "#fe932c", "tertiary": "#1d2b3d", "surface-tint": "#515f74", "on-tertiary-fixed-variant": "#3a485b", "primary-container": "#334155", "surface-container-low": "#f7f3e9", "on-tertiary-container": "#9eadc4", "on-error-container": "#93000a", "surface": "#fdf9ef", "outline": "#75777d", "on-secondary-container": "#663500", "on-primary-fixed-variant": "#3a485c", "background": "#fdf9ef", "secondary-fixed-dim": "#ffb77d", "surface-container-highest": "#e6e2d8", "on-surface-variant": "#44474c", "secondary": "#904d00", "on-secondary-fixed-variant": "#6e3900", "surface-container": "#f2eee3", "primary-fixed": "#d5e3fd", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#b9c7df", "secondary-fixed": "#ffdcc3", "on-secondary-fixed": "#2f1500", "primary": "#1d2b3e", "surface-dim": "#dddad0", "on-primary-fixed": "#0d1c2f", "surface-variant": "#e6e2d8", "error-container": "#ffdad6", "inverse-primary": "#b9c7e0", "on-primary-container": "#9eadc5", "outline-variant": "#c5c6cd", "inverse-surface": "#32312a", "on-background": "#1c1c16", "on-secondary": "#ffffff", "on-tertiary-fixed": "#0d1c2e", "surface-container-high": "#ece8de", "surface-container-lowest": "#ffffff", "on-surface": "#1c1c16", "tertiary-container": "#334154", "surface-bright": "#fdf9ef", "on-error": "#ffffff", "inverse-on-surface": "#f5f0e6", "error": "#ba1a1a" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "margin-tablet": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem" }, fontFamily: { "display-lg": ["Manrope"], "display-lg-mobile": ["Manrope"], "headline-lg-mobile": ["Manrope"], "headline-md": ["Manrope"], "headline-lg": ["Manrope"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "headline-sm": ["Manrope"], "label-sm": ["JetBrains Mono"], "title-md": ["Manrope"], "body-md": ["Manrope"], "label-md": ["JetBrains Mono"], "numeric-stat": ["Manrope"] }, fontSize: { "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "numeric-stat": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Wishlist Jeda Berpikir</span></div><a class="w-11 h-11 flex items-center justify-center" data-path="pengaturan-profil-finansial" href="#"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></a></div></header><main class="flex-1 flex flex-col relative w-full px-margin-mobile pt-16 pb-24 bg-surface"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header Ruang Kontemplasi -->
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">self_improvement</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ruang Kontemplasi</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Wishlist &amp; Jeda Berpikir</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      Ruang tenang sebelum bertransaksi. Beri waktu gelombang emosi mereda dan putuskan dengan logika yang jernih.
+    </p>
+</section>
+<!-- Banner Ringkasan (Cooling-off Summary) -->
+<section class="bg-surface-container rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">hourglass_top</span>
+</div>
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase font-semibold">Cooling-off Aktif</span>
+<h2 class="font-title-md text-title-md text-primary font-bold">3 Barang Sedang Ditunda</h2>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+        3 Aktif
+      </span>
+</div>
+<!-- Metrik Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">savings</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Potensi Hemat</span>
+</div>
+<div class="mt-space-xs">
+<p class="font-numeric-stat text-headline-sm text-primary font-bold">Rp 1.420.000</p>
+<span class="font-label-sm text-label-sm text-outline">tertahan dari impuls</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col justify-between">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">trending_down</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bunga Terhindar</span>
+</div>
+<div class="mt-space-xs">
+<p class="font-numeric-stat text-headline-sm text-secondary font-bold">~Rp 245.000</p>
+<span class="font-label-sm text-label-sm text-outline">estimasi paylater</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Kategori Tabs -->
+<section class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<button class="filter-tab active px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-primary text-on-primary font-medium shrink-0 flex items-center gap-1.5 shadow-sm" data-target="all">
+<span>Semua</span>
+<span class="w-4 h-4 rounded-full bg-on-primary/20 text-[10px] flex items-center justify-center">3</span>
+</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:text-on-surface font-medium shrink-0 flex items-center gap-1.5" data-target="ended">
+<span>Jeda Berakhir</span>
+<span class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary-container text-[10px] flex items-center justify-center font-bold">1</span>
+</button>
+<button class="filter-tab px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:text-on-surface font-medium shrink-0 flex items-center gap-1.5" data-target="active">
+<span>Masih Berjalan</span>
+<span class="w-4 h-4 rounded-full bg-surface-variant text-on-surface-variant text-[10px] flex items-center justify-center">2</span>
+</button>
+</section>
+<!-- Kartu Prioritas: Masa Cooling-off 24 Jam Telah Selesai -->
+<section class="item-card ended flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-md gap-space-md relative overflow-hidden" id="card-evaluasi">
+<!-- Top badge ribbon -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-secondary">Waktu Evaluasi Telah Tiba</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-medium">
+        24 Jam Selesai
+      </span>
+</div>
+<!-- Product Info Row -->
+<div class="flex gap-space-md items-center">
+<div class="w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-surface-container relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Close-up aesthetic shot of a sleek second-hand smartphone resting calmly on a textured warm linen surface with ambient studio lighting in soft slate and ochre tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4sh30XzvPLI-__AgjBThIzfRmajnk4C7hUDxvLIitVC3RiJWTVzgF9Exf4KP8zg1JAkv1VNM3nyBRpGnG7tbZe_9tuBAGAfFqDdsW_mCZ3WK1XwihGbU9ynydG-lwI_KNoCBY2ZdLvuGGK8-PujHd3kVCfAEHtZ5XhOF3O_U6LW1WUBdtX5lpuoIr6DP-yPH7BCHYjCwUJC8tFkGKCHrq7RRcQR48h1o25wAVAK9"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Gadget</span>
+<span class="text-outline text-[10px]">•</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Risiko Awal 78%</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-bold truncate">HP Bekas (Smartphone Second)</h3>
+<p class="font-headline-sm text-headline-sm text-primary font-bold">Rp 1.500.000</p>
+</div>
+</div>
+<!-- Introspection Box -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-[18px] text-secondary">psychology_alt</span>
+<h4 class="font-title-md text-body-lg text-primary font-semibold">Masih Ingin Beli Sekarang?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Setelah jeda 24 jam dan lonjakan dopamin belanja mereda, apakah barang ini benar-benar menyelesaikan masalah harianmu, atau hanya keinginan sesaat?
+      </p>
+<!-- Additional thoughtful options -->
+<div class="flex flex-col gap-1.5 mt-space-xs">
+<button class="action-delay-income flex items-center justify-between w-full px-space-sm py-2 rounded-lg bg-surface-container-lowest text-left text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="font-body-sm text-body-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-outline">event_upcoming</span>
+            Tinjau setelah pemasukan berikutnya
+          </span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+<button class="action-extend-24 flex items-center justify-between w-full px-space-sm py-2 rounded-lg bg-surface-container-lowest text-left text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="font-body-sm text-body-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+            Tunda 24 jam lagi (tekanan promo)
+          </span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Primary CTAs -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full bg-primary text-on-primary py-3 px-space-md rounded-lg font-title-md text-body-lg font-semibold flex items-center justify-center gap-2 hover:bg-tertiary active:scale-[0.99] transition-all shadow-sm" id="btn-cancel-invest" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">arrow_circle_up</span>
+<span>Batal Beli &amp; Alihkan ke Reksa Dana</span>
+</button>
+<a class="text-center font-body-sm text-body-sm text-outline hover:text-primary transition-colors py-1" href="#">
+        Saya sudah timbang matang, lanjutkan checkout →
+      </a>
+</div>
+</section>
+<!-- Daftar Masih Berjalan -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline">timelapse</span>
+<h3 class="font-title-md text-title-md text-primary font-bold">Sedang Dalam Jeda Dingin</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline">2 barang</span>
+</div>
+<!-- Item 1: Sneakers Vintage -->
+<article class="item-card active flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-sm">
+<div class="flex gap-space-md items-start">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Top down photo of stylish vintage retro edition sneakers with muted earthy warm sole on smooth clean background with soft minimal shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRZuHsE6yqIqDgo_FrW2VpH9-T9qizXrw06qhHHSmTbWDjoeC22FtorGiw1cSn7Ny9MnO79qfI-e9V951Lyks37lMdI6O8eVzGgxuzSnJ-tUKn8mvbIv6vEg4vjntxokzoC7A12qd6n1pSGvKSikl_-dTxxBu5zyUJdUbAXMvJ_jZsU7S3rMHZUO4e7T2W1TEbeq-wsZC5dlSUO_YJP7USYCoOMmdK152J2xKs7ji8"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Gaya Hidup</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Sisa 18j 42m
+            </span>
+</div>
+<h4 class="font-title-md text-body-lg text-primary font-semibold truncate">Sneakers Vintage Retro Edition</h4>
+<p class="font-title-md text-title-md text-primary font-bold mt-0.5">Rp 680.000</p>
+</div>
+</div>
+<!-- Progress Cool-down -->
+<div class="flex flex-col gap-1 mt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Proses Penurunan Emosi</span>
+<span class="font-mono">25%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-secondary transition-all" style="width: 25%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">lightbulb</span> Alasan: Spontan diskon payday
+        </span>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+          Detail
+        </button>
+</div>
+</article>
+<!-- Item 2: Smartwatch Fitness Tracker -->
+<article class="item-card active flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-sm">
+<div class="flex gap-space-md items-start">
+<div class="w-14 h-14 rounded-lg overflow-hidden shrink-0 bg-surface-container shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Minimalist modern matte black smartwatch fitness tracker with warm ambient display resting on neutral slate paper desk surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbkcs9cqzWztq24I7Zbz00wu-O4AkVLC-Law4aKiUbgc1CbmjoXVr6c4z5VzfgQTYSUf4z0LippDVuAGjXeQnbMqbG-V2EUetZMDEf4mlG_dk64C7WpalSfHqE464eK594MKnJX1VmBOG3irah_8aCsM_vz-iLd1jhZlt5gGf9tuG6th70TIfK-C2G8nSDmdjYrh0sXQ96SxfgTh3rp_5lSEMDbAp0seDyWu9pRbLt"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase">Elektronik</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[12px]">schedule</span> Sisa 6j 15m
+            </span>
+</div>
+<h4 class="font-title-md text-body-lg text-primary font-semibold truncate">Smartwatch Fitness Tracker</h4>
+<p class="font-title-md text-title-md text-primary font-bold mt-0.5">Rp 500.000</p>
+</div>
+</div>
+<!-- Progress Cool-down -->
+<div class="flex flex-col gap-1 mt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Proses Penurunan Emosi</span>
+<span class="font-mono">75%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full rounded-full bg-secondary-container transition-all" style="width: 75%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline">lightbulb</span> Alasan: Tren resolusi olahraga
+        </span>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">
+          Detail
+        </button>
+</div>
+</article>
+</section>
+<!-- Seksi Kemenangan Bulan Ini -->
+<section class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase">Catatan Kesadaran</span>
+<h4 class="font-title-md text-title-md text-primary font-bold">Kemenangan Bulan Ini</h4>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">
+        Bulan Berjalan
+      </span>
+</div>
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-lg p-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Impuls Berhasil Ditolak</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">5 Barang</span>
+</div>
+<div class="h-8 w-px bg-surface-container"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-outline">Dialihkan ke Dana Darurat</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Rp 1.170.000</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 italic">
+<span class="material-symbols-outlined text-[16px] text-secondary">favorite</span>
+      "Setiap jeda adalah benteng yang menjaga tujuan jangka panjangmu."
+    </p>
+</section>
+<!-- Tombol Tambah Barang Manual -->
+<section class="pt-space-xs pb-space-sm">
+<button class="w-full bg-surface-container-high text-primary hover:bg-surface-variant active:scale-[0.99] transition-all py-3.5 px-space-md rounded-xl font-title-md text-body-lg font-bold flex items-center justify-center gap-2 shadow-sm" id="btn-add-item" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Tambah Barang Manual ke Jeda Berpikir</span>
+</button>
+</section>
+<!-- Delight Micro-Feedback Toast (Hidden by default) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-primary text-on-primary p-space-md rounded-xl shadow-xl flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-50" id="toast-delight">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h5 class="font-title-md text-body-md font-bold text-on-primary">Keputusan Bijak Terpasang!</h5>
+<p class="font-body-sm text-body-sm text-on-primary-container truncate" id="toast-text">Rp 1.500.000 dialihkan ke portofolio Reksa Dana.</p>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 1. Tab Filter Behavior
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const items = document.querySelectorAll('.item-card');
+
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        filterTabs.forEach(t => {
+          t.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tab.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+        const target = tab.getAttribute('data-target');
+        items.forEach(item => {
+          if (target === 'all') {
+            item.style.display = 'flex';
+          } else if (target === 'ended' && item.classList.contains('ended')) {
+            item.style.display = 'flex';
+          } else if (target === 'active' && item.classList.contains('active')) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 2. Delight Notification Helper
+    const toast = document.getElementById('toast-delight');
+    const toastText = document.getElementById('toast-text');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (toastText) toastText.textContent = message;
+      if (toast) {
+        toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        toast.classList.add('opacity-100', 'translate-y-0');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        }, 3200);
+      }
+    }
+
+    // 3. Action: Batal Beli & Alihkan ke Reksa Dana
+    const btnCancelInvest = document.getElementById('btn-cancel-invest');
+    const cardEvaluasi = document.getElementById('card-evaluasi');
+
+    if (btnCancelInvest && cardEvaluasi) {
+      btnCancelInvest.addEventListener('click', () => {
+        cardEvaluasi.style.transition = 'all 0.4s ease';
+        cardEvaluasi.style.opacity = '0.3';
+        cardEvaluasi.style.transform = 'scale(0.97)';
+        setTimeout(() => {
+          cardEvaluasi.innerHTML = `
+            <div class="flex items-center gap-3 p-space-xs text-primary">
+              <span class="material-symbols-outlined text-[28px] text-secondary">verified</span>
+              <div>
+                <p class="font-title-md text-title-md font-bold">Kemenangan Sadar Terwujud!</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Rp 1.500.000 dialihkan ke portofolio investasi.</p>
+              </div>
+            </div>
+          `;
+          cardEvaluasi.style.opacity = '1';
+          cardEvaluasi.style.transform = 'scale(1)';
+          showToast('Rp 1.500.000 berhasil dialihkan ke Reksa Dana!');
+        }, 400);
+      });
+    }
+
+    // 4. Action: Tunda 24 jam lagi
+    const btnExtend = document.querySelector('.action-extend-24');
+    if (btnExtend) {
+      btnExtend.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showToast('Jeda diperpanjang 24 jam. Ambil napas, rasakan tenangnya pikiran.');
+      });
+    }
+
+    // 5. Action: Tinjau setelah pemasukan berikutnya
+    const btnDelayIncome = document.querySelector('.action-delay-income');
+    if (btnDelayIncome) {
+      btnDelayIncome.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showToast('Jeda dijadwalkan ulang pada hari gajian berikutnya.');
+      });
+    }
+
+    // 6. Action: Tambah Barang Manual
+    const btnAdd = document.getElementById('btn-add-item');
+    if (btnAdd) {
+      btnAdd.addEventListener('click', () => {
+        showToast('Membuka lembar jeda baru...');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[22px]">spa</span><span class="font-label-sm text-label-sm tracking-wide">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="cek-beli" href="#"><span class="material-symbols-outlined text-[22px]">help_outline</span><span class="font-label-sm text-label-sm tracking-wide">Cek Beli</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs transition-colors text-primary font-semibold" data-path="wishlist-jeda-berpikir" href="#"><span class="material-symbols-outlined text-[22px]">hourglass_pause</span><span class="font-label-sm text-label-sm tracking-wide">Jeda</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="insight-evaluasi" href="#"><span class="material-symbols-outlined text-[22px]">insights</span><span class="font-label-sm text-label-sm tracking-wide">Insight</span></a></div></nav></body></html>

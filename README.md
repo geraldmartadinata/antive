@@ -6,6 +6,8 @@ Antive helps Indonesian students on allowances and young salaried workers decide
 | --- | --- |
 | `antive/parser.py` | Rules for extracting transaction details from Indonesian text, including amounts such as `25rb` and `1,5jt`. |
 | `antive/guidance.py` | Keyword retrieval over three research notes and Indonesian reflection prompts with citations. |
+| `design/think-twice/` | Think Twice screen mockups and visual design reference, organized separately from the Python prototype. |
+| `frontend/` | Planned home for the React and Tailwind application when frontend implementation begins. |
 | [`research/rag.md`](research/rag.md) | Local Qwen experiment, four fictional cases, recorded outputs, and reproduction steps. |
 | [`research/xgboost/`](research/xgboost/README.md) | Plan for an XGBoost experiment once independently labeled purchase examples are available. |
 | [`research/pilot.md`](research/pilot.md) | Proposed Antive and Gemini tasks for a student and young-worker pilot. |
